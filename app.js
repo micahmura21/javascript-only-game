@@ -1,6 +1,6 @@
 function resizeWindow() {
-  var width = window.innerWidth - 40,
-      height = window.innerHeight - 40;
+  var width = window.innerWidth - 40;
+  var height = window.innerHeight - 40;
   
   var canvas = document.getElementsByTagName('canvas')[0];
   canvas.width = width;
@@ -69,7 +69,6 @@ function reset() {
 	monster.x = 32 + (Math.random() * (canvas.width - 64));
 	monster.y = 32 + (Math.random() * (canvas.height - 64));
 };
-
 // Update game objects
 function update(modifier) {
 	if (38 in keysDown) { // Player holding up
