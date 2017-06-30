@@ -4,6 +4,8 @@
 
 Create a game to build upon your knowledge of JavaScript DOM Nodes and HTML5 Canvas. With persistence, you will be able to completely create a game using only JavaScript!
 
+![Screenshot](https://github.com/junior-devleague/javascript-only-game/blob/master/Screenshot.png?raw=true)
+
 ### Prerequesites
 
 - Pre lecture of JavaScript DOM Nodes
