@@ -104,6 +104,7 @@ Live-Demo
 6. Invoke this function at the bottom of the page before the setInterval declaration
 
 ### Resources
+- [JavaScript HTML DOM Elements (Nodes)](https://www.w3schools.com/js/js_htmldom_nodes.asp)
 - [HTML DOM Element Object](https://www.w3schools.com/jsref/dom_obj_all.asp)
 - [HTML5 Canvas](https://www.w3schools.com/html/html5_canvas.asp)
 - [For...in](https://www.w3schools.com/jsref/jsref_forin.asp)
