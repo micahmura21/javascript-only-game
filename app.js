@@ -1,7 +1,7 @@
 function resizeWindow() {
 	var width = window.innerWidth-40;
 	var height = window.innerHeight-40;
-	var canvas = getElementsByTagName('canvas')[0];
+	var canvas = Documents.getElementsByTagName('canvas')[0];
 	canvas.width = width;
 	canvas.height = height;
 	canvas.style.width = width + 'px';
@@ -37,6 +37,20 @@ monsterImage.onload = function () {
 };
 monsterImage.src = "https://raw.github.com/lostdecade/simple_canvas_game/master/images/monster.png";
 
+	
+var hero = {
+	speed: 10
+	};
+var monster = {};
+var monstersCaught = 0;
+var keysDown = {};
+addEventListener("keydown",function (e) {
+	keysDown[e.keyCode] = true;
+}, false);
+addEventListener("keyup", function (e){
+	delete keysDown[e.keyCode];
+}, false);
+
 function reset(){
 	hero.x=canvas.width/2;
 	hero.y=canvas.height/2;
@@ -48,7 +62,7 @@ function update(modifier){
 		hero.y -= hero.speed * modifier;
 	}
 	if (40 in keysDown) {
-		hero.y -= hero.speed * modifier;
+		hero.y += hero.speed * modifier;
 	}
 
 	if (37 in keysDown) {
@@ -56,7 +70,7 @@ function update(modifier){
 	}
 
 	if (39 in keysDown) {
-		hero.x -= hero.speed * modifier;
+		hero.x += hero.speed * modifier;
 	}	
  	if (
  		hero.x<=(monster.x + 32)
@@ -81,19 +95,7 @@ function render(){
 		ctx.drawImage(monsterImage, monster.x, monster.y);
 	}
 }
-	
-var hero = {
-	speed: 256 
-	};
-var monster = {};
-var monstersCaught = 0;
-var keysDown = {};
-addEventListener("keydown",function (e) {
-	keysDown[e.KeyCode] = true;
-}, false);
-addEventListener("keydown", function (e){
-	delete keysDown[e.keyCode];
-}, false); 
+ 
 
 function main(){
 	var now = Date.now()
