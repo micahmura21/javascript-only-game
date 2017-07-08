@@ -21,21 +21,21 @@ var bgImage = document.createElement('img');
 bgImage.onload = function () {
 	bgReady = true;
 };
-bgImage.src = "https://raw.github.com/lostdecade/simple_canvas_game/master/images/background.png";
+bgImage.src = "V1jDmas.jpg";
 
 var heroReady = false;
 var heroImage = document.createElement('img');
 heroImage.onload = function () {
 	heroReady = true;
 };
-heroImage.src = "https://raw.github.com/lostdecade/simple_canvas_game/master/images/hero.png";
+heroImage.src = "genji_x.png";
 
 var monsterReady = false;
 var monsterImage = document.createElement('img');
 monsterImage.onload = function () {
 	monsterReady = true;
 };
-monsterImage.src = "https://raw.github.com/lostdecade/simple_canvas_game/master/images/monster.png";
+monsterImage.src = "iCrAb6M.png";
 
 	
 var hero = {
